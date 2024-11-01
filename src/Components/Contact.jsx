@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
@@ -20,8 +21,24 @@ const Contact = () => {
     }
 
     setError('');
-    setSubmitted(true);
-    // Here you can add your form submission logic, e.g., sending data to an API.
+
+    // EmailJS Integration
+    emailjs
+      .send(
+        'service_v8irtbm',          // Replace with your EmailJS service ID
+        '__ejs-test-mail-service__',          // Replace with your EmailJS template ID
+        { name, email, message },
+        '_07tMZvFnxLznUIbu'               // Replace with your EmailJS user ID
+      )
+      .then(
+        () => {
+          setSubmitted(true);
+        },
+        (error) => {
+          setError('Failed to send the message. Please try again later.');
+          console.error('EmailJS Error:', error);
+        }
+      );
   };
 
   return (

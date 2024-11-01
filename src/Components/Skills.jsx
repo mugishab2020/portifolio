@@ -64,7 +64,7 @@ const Skills = () => {
             
            
             <div className="ml-6">
-              <h3 className="text-xl font-semibold text-green-400 mb-2 dotted">{skill.name}</h3>
+              <h3 className="text-xl font-semibold text-green-400 mb-2">{skill.name}</h3>
               <p className="text-sm text-gray-300">{skill.description}</p>
             </div>
           </div>
