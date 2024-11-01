@@ -5,7 +5,7 @@ const Projects = () => {
     {
       title: 'Simple Shell',
       description: 'A custom shell implemented in C that mimics the behavior of a Unix shell.',
-      link: '#',
+      link: 'https://github.com/jarxlim/simple_shell',
       techStack: ['C', 'Linux', 'Unix'],
     },
     {
@@ -17,8 +17,14 @@ const Projects = () => {
     {
       title: 'Portfolio Website',
       description: 'A personal portfolio website showcasing my skills and projects, built with React and TailwindCSS.',
-      link: '#',
+      link: 'https://github.com/the-1Riddle/empowerHer/tree/main/frontend/src/components',
       techStack: ['React', 'TailwindCSS', 'JavaScript'],
+    },
+    {
+      title: 'Empowerher',
+      description: 'Empowerher is the Vue and python project that helps the female environment to face the issues related to the sexual harracement ',
+      link: '#',
+      techStack: ['Vue', 'CSS', 'fastAPI'],
     }
   ];
 
@@ -78,7 +84,7 @@ const Projects = () => {
               <a
                 href={project.link}
                 className="inline-block text-green-500 hover:text-green-400 underline transition duration-300"
-                target="_blank"
+                target={project.link}
                 rel="noopener noreferrer"
               >
                 View Project

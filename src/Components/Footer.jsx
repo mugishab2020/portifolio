@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-gray-400">
-      <div className="container mx-auto flex justify-between items-center">
+    <footer className="bg-gray-900 text-gray-400 py-8 rounded-md">
+      <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
 
         {/* Left Section - Quick Links */}
-        <div className="flex flex-col space-y-2 mt-2">
+        <div className="flex flex-col space-y-4 md:ml-6 mt-2">
           <h3 className="text-lg font-semibold text-green-500">Quick Links</h3>
-          <ul className="space-y-1/2">
+          <ul className="flex flex-col space-y-2">
             <li>
               <Link to="/about" className="hover:text-green-500">
                 About Me
@@ -33,8 +33,13 @@ const Footer = () => {
           </ul>
         </div>
 
-        
-        <div className="flex flex-col space-y-2 items-end">
+        {/* Center Section - Year and Copyright */}
+        <div className="text-center my-4 md:my-0">
+          <p>&copy; {new Date().getFullYear()} <span className="text-green-500">Edson Mugisha</span>. All rights reserved.</p>
+        </div>
+
+        {/* Right Section - Follow Me */}
+        <div className="flex flex-col space-y-2 md:mr-6 items-center md:items-end mt-4 md:mt-0">
           <h3 className="text-lg font-semibold text-white">Follow Me</h3>
           <div className="flex space-x-4">
             <a
@@ -63,13 +68,6 @@ const Footer = () => {
             </a>
           </div>
         </div>
-      </div>
-
-      {/* Bottom Copyright Section with Background Color */}
-      <div className="bg-gray-800 py-4 text-center text-gray-400">
-        <p>
-          &copy; {new Date().getFullYear()} <span className="text-green-500">Edson Mugisha</span>. All rights reserved.
-        </p>
       </div>
     </footer>
   );

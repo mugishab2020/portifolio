@@ -5,9 +5,8 @@ const Navbar = () => {
   const [activeLink, setActiveLink] = useState('');
   const location = useLocation();
 
-  // Update active link state based on the current location when component renders
   React.useEffect(() => {
-    setActiveLink(location.pathname); // this will automatically highlight the active route link based on path
+    setActiveLink(location.pathname); 
   }, [location]);
 
   return (
@@ -61,9 +60,13 @@ const Navbar = () => {
         </Link>
       </nav>
 
-      <button className="bg-green-500 text-white py-2 px-8 rounded-xl ml-10">
+      <Link
+        to="/contacts"
+        className="bg-green-500 text-white py-2 px-8 rounded-xl ml-10 hover:bg-green-400"
+        onClick={() => setActiveLink('/contacts')}
+      >
         Hire Me
-      </button>
+      </Link>
     </header>
   );
 };

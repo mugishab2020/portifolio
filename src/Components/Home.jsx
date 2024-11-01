@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Me from '../public/images/me1.jpg';
 
 const Home = () => {
   return (
@@ -23,7 +24,7 @@ const Home = () => {
         {/* Right Section - Profile Image */}
         <div className="md:w-1/2 flex justify-center md:justify-end">
           <img 
-            src="/home/edson-pc2/portifolio/portfolio/Pasted image.jpg" 
+            src={Me}
             alt="Profile" 
             className="rounded-full w-64 h-64 object-cover shadow-lg border-4 border-green-500" 
           />
@@ -34,7 +35,7 @@ const Home = () => {
       <div className="mt-16 text-center">
         <h2 className="text-3xl font-semibold mb-4">What I Do</h2>
         <p className="text-lg mb-8">
-          I specialize in backend development, frontend design, and building scalable web applications. Explore my skills and projects to see what I can do.
+          I specialize in backend development, frontend design with React, and building scalable web applications. Explore my skills and projects to see what I can do.
         </p>
         <Link to="/skills">
           <button className="bg-green-500 text-white py-3 px-6 rounded-lg shadow-lg hover:bg-green-400 transition duration-300">
